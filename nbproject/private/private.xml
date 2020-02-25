@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/E:/Repo/Laravel/Layout/resources/js/bootstrap.js</file>
+            <file>file:/E:/Repo/Laravel/Layout/app/User.php</file>
+            <file>file:/E:/Repo/Laravel/Layout/resources/js/app.js</file>
+            <file>file:/E:/Repo/Laravel/Layout/resources/views/home.blade.php</file>
+            <file>file:/E:/Repo/Laravel/Layout/resources/views/auth/login.blade.php</file>
+            <file>file:/E:/Repo/Laravel/Layout/resources/views/welcome.blade.php</file>
+            <file>file:/E:/Repo/Laravel/Layout/app/Http/Controllers/Controller.php</file>
+            <file>file:/E:/Repo/Laravel/Layout/resources/views/layouts/app.blade.php</file>
+            <file>file:/E:/Repo/Laravel/Layout/app/Http/Controllers/Auth/RegisterController.php</file>
+            <file>file:/E:/Repo/Laravel/Layout/resources/views/auth/register.blade.php</file>
+            <file>file:/E:/Repo/Laravel/Layout/resources/sass/app.scss</file>
+            <file>file:/E:/Repo/Laravel/Layout/.env</file>
+            <file>file:/E:/Repo/Laravel/Layout/database/migrations/2014_10_12_000000_create_users_table.php</file>
+            <file>file:/E:/Repo/Laravel/Layout/resources/views/auth/verify.blade.php</file>
+        </group>
+    </open-files>
+</project-private>
