@@ -83,11 +83,11 @@
             <div class="content">
                 <div class="title m-b-md">
                     Warehouse Layout Application
-                    <p>Transfering app from origin branch to MVC master branch</p>
-                    <p> use user: test@test.com password: 1234567890  to login</p>
+                    
                 </div>
 
-               
+                <p>Transfering app from origin branch to MVC master branch</p>
+                    <p> use user: test@test.com password: 1234567890  to login</p>
             </div>
         </div>
     </body>
