@@ -79,18 +79,12 @@
                 </div>
             @endif
 
-            <div class="topnav">
-                <a class="active" href="dashboard.php">Dashboard Home</a>
-                <a href="{{url('/additem')}}">Add item</a>
-                <a href="{{url('/deleteitem')}}">Delete Item</a>
-                <a href="{{url('/sortitems')}}">Sort Items</a>
-                <a href="{{url('/listitems')}}">List items</a>
-                <a href="{{url('/aisledisplay')}}">Display Aisle</a>
-                <a href="{{url('/')}}">Logout</a>
-            </div> 
+           
             <div class="content">
                 <div class="title m-b-md">
                     Warehouse Layout Application
+                    <p>Transfering app from origin branch to MVC master branch</p>
+                    <p> use user: test@test.com password: 1234567890  to login</p>
                 </div>
 
                
