@@ -4,7 +4,7 @@
 <div class="container">
      <!-- Top Menu Navigation Bar -->
         <div class="topnav">
-            <a class="active" href="dashboard.php">Dashboard Home</a>
+            <a class="active" href="{{url('/home')}}">Dashboard Home</a>
             <a href="{{url('/additem')}}">Add item</a>
             <a href="{{url('/deleteitem')}}">Delete Item</a>
             <a href="{{url('/sortitems')}}">Sort Items</a>

@@ -86,7 +86,7 @@
                     
                 </div>
 
-                <p>Transfering app from origin branch to MVC master branch</p>
+                <p>Transfering app from origin branch to master branch (MVC)</p>
                     <p> use user: test@test.com password: 1234567890  to login</p>
             </div>
         </div>
