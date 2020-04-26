@@ -5,7 +5,7 @@
 
 <div class="jumbotron bg-light">
     <h1 class="index pb-2">Welcome To the Warehouse Layout Application</h1>
-    <p class="index">Abstract
+    <p class="index"><strong>Abstract</strong><br>
         Stock Management and its efficient movement is one of the biggest challenges facing a distribution warehouse. Bottlenecks in this process cost the business time and money.</p>
      <p class="index">    A small section of a warehouse has been investigated, in particular the picking department to try to improve on the current process and to maximise efficiency using an
           Information Technology solution.</p> <p class="index"> The technology in question is a web application that uses intelligent space planning to ascertain a products optimal location to assist in streamlining the picking process.
