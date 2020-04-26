@@ -1,37 +1,27 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+       <!--  <meta name="csrf-token" content="csrf_token "> -->
 
-@section('content')
-<div class="container">
-     <!-- Top Menu Navigation Bar -->
-        <div class="topnav">
-            <a class="active" href="{{url('/home')}}">Dashboard Home</a>
-            <a href="{{url('/additem')}}">Add item</a>
-            <a href="{{url('/deleteitem')}}">Delete Item</a>
-            <a href="{{url('/sortitems')}}">Sort Items</a>
-            <a href="{{url('/listitems')}}">List items</a>
-            <a href="{{url('/aisledisplay')}}">Display Aisle</a>
-            <a href="{{url('/')}}">Logout</a>
-        </div> 
-     <div class="row p-3">
-        <h1>Layout Dashboard</h1>
-     </div>
-        <!-- Graphical display of main menu using image buttons -->
-        <div class="row p-10">
-            <div class="col-12 pr-2">
-                <a href="{{url('/additem')}}"><img src="images/additem.png" width="125" height="125" title="add items" alt="add item"></a>
-                <a href="{{url('/deleteitem')}}"><img src="images/deleteitem.png" width="125" height="125" title="delete items" alt="delete item"></a>
-                <a href="{{url('/sortitems')}}"><img src="images/sortitems.png" width="125" height="125" title="sort items" alt="sort item"></a>
-        
-            </div>
-        </div>
-        <div class="row pr-5 p-3">
-            <div class="col-12 pr-2">
-            <a href="{{url('/listitems')}}"><img src="images/listitems.png" width="125" height="125" title="list items" alt="list item"></a>
-            <a href="{{url('/aisledisplay')}}"><img src="images/displayaisle.png" width="125" height="125" title="logout" alt="dispay aisle"></a>
-            <a href="{{url('/')}}"><img src="images/logout.png" width="125" height="125" title="logout" alt="add item"></a>
-         <!--  <a href="temp.php"><img src="images/blank.png" width="125" height="125" title="logout" alt="test db functions"></a> -->
-        <!--  <a href="tabletest.php"><img src="images/blank.png" width="125" height="125" title="logout" alt="test table"></a> -->
-        </div>
-        </div>
-</div>
-@endsection
+        <title>Layout Application</title>
+
+        <!-- Fonts -->
+        <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+        <link href="{{ URL::asset('css/bootstrap.min.css') }}" rel="stylesheet">
+        <link href="{{ URL::asset('css/layout.css') }}" rel="stylesheet">
+    </head>
+    <body>
+        @include('include/messages')
+        <main role="main">
+       <!--     include('include/messages') -->
+            @yield('content')
+        </main>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="{{ URL::asset('js/jquery.validate.min.js') }}"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="{{ URL::asset('js/layout.js') }}"></script>
+    </body>
+</html>
