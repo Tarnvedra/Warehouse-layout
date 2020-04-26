@@ -23,7 +23,7 @@
 
     <h3 class="index">Screenshots</h3>
     <img src="images/list.png" alt="unable to load image" width="700" height="500">
-    <img src="images/dash.png" alt="unable to load image" width="700" height="500">
+    <img src="images/dasha.png" alt="unable to load image" width="700" height="500">
 </div>
 
 @endsection
