@@ -15,8 +15,15 @@
        <p class="index"> Web Application development written in PHP/Laravel (Origin branch PHP/HTML5) for efficient product selection, using web app for efficient placement of stock using layout planning <br>with volumetrics (calculations using Mass , Volume and Density)
         
      <br>   Origin branch has been deprecated converting code to Laravel MVC for master branch</p>
+
+     <h4 class="index">Current Progress</h4>
+     <p class="index"> Currently only login, register , dashboard and list items are functioning all other CRUD functions are being worked upon and do not function correctly<br>
+        at this time, although it is possible to create an account<p>
     <p><a class="btn btn-primary btn-lg" href="/login" role="button">Proceed to Login Page</a> <a class="btn btn-success btn-lg" href="/register" role="button">Proceed to Regististration page</a></p>
 
+    <h3 class="index">Screenshots</h3>
+    <img src="images/list.png" alt="unable to load image" width="700" height="500">
+    <img src="images/dash.png" alt="unable to load image" width="700" height="500">
 </div>
 
 @endsection
