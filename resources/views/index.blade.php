@@ -17,7 +17,7 @@
      <br>   Origin branch has been deprecated converting code to Laravel MVC for master branch</p>
 
      <h4 class="index">Current Progress</h4>
-     <p class="index"> Currently only login, register , dashboard and list items are functioning all other CRUD functions are being worked upon and do not function correctly<br>
+     <p class="index"> Login, register , dashboard , add, edit,update and list items are functioning, delete only works from list items at the moment all other functions are being worked upon and do not function correctly<br>
         at this time, although it is possible to create an account<p>
     <p><a class="btn btn-primary btn-lg" href="/login" role="button">Proceed to Login Page</a> <a class="btn btn-success btn-lg" href="/register" role="button">Proceed to Regististration page</a></p>
 
