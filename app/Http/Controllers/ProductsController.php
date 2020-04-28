@@ -14,6 +14,13 @@ class ProductsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+
+
     public function index()
     {
      $products = Product::orderBy('sku' , 'asc')->paginate(7);
@@ -51,7 +58,8 @@ class ProductsController extends Controller
                 'image' => 'image|nullable|max:1999'
 
         ]);
-        
+
+        // dd($request->all());
         // verify file upload
         if ($request->hasFile('image')){
         // retrieve file name and extension
@@ -65,6 +73,7 @@ class ProductsController extends Controller
         else {
             $fileNameToStore = 'empty.png';
         }
+
         $product = new Product;
         $product->sku = $request->input('sku');
         $product->description = $request->input('description');
@@ -72,11 +81,13 @@ class ProductsController extends Controller
         $product->length = $request->input('length');
         $product->height = $request->input('height');
         $product->mass = $request->input('mass');
-        $product->volume = $request->input('volume');
+        $product->volume =  $request->input('volume');
         $product->density = $request->input('density');
-        $product->size = $request->input('size');
+        $product->size =  $request->input('size');
         $product->image =  $fileNameToStore;
         $product->save();
+
+        return redirect('/products')->with('success', 'Product added to database!');
     }
 
     /**
@@ -121,9 +132,52 @@ class ProductsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $sku)
     {
-        //
+        $this->validate($request , [
+            'sku' => 'required',
+            'description' => 'required',
+            'width' => 'required' ,
+            'length' => 'required' ,
+            'height' => 'required' ,
+            'mass' => 'required' ,
+            'volume' => 'required' ,
+            'density' => 'required' ,
+            'size' => 'required' ,
+            'image' => 'image|nullable|max:1999'
+
+    ]);
+
+    $product = Product::find($sku);
+    // return($sku);
+    // verify file upload
+    // dd($request->all());
+    if ($request->hasFile('image')){
+        // retrieve file name and extension
+        $filenameExtension = $request->file('image')->getClientOriginalName();
+        // split up filename and extension
+        $filename = pathinfo($filenameExtension, PATHINFO_FILENAME);
+        $extension = $request->file('image')->getClientOriginalExtension();
+        $fileNameToStore = $filename.'_'.time().'.'.$extension;
+        $path = $request->file('image')->storeAs('public/uploads',  $fileNameToStore);
+        }
+        else {
+            $fileNameToStore = 'empty.png';
+        }
+      
+        $product->sku = $request->input('sku');
+        $product->description = $request->input('description');
+        $product->width = $request->input('width');
+        $product->length = $request->input('length');
+        $product->height = $request->input('height');
+        $product->mass = $request->input('mass');
+        $product->volume =  $request->input('volume');
+        $product->density = $request->input('density');
+        $product->size =  $request->input('size');
+        $product->image =  $fileNameToStore;
+        $product->save();
+
+        return redirect('/products')->with('success' , 'Product Updated');
     }
 
     /**
@@ -147,7 +201,7 @@ class ProductsController extends Controller
 
     public function sortitems() 
     {
-    $products = Product::orderBy('sku' , 'asc')->paginate(8);
+    $products = Product::orderBy('sku' , 'asc')->paginate(7);
      return view('pages/sortitems')->with('products' , $products);
     }
 
@@ -157,4 +211,14 @@ class ProductsController extends Controller
         return view('pages/additems');
     }
 
+    public function deleteitems() 
+    { 
+        return view('pages/delitem');
+    }
+
+    public function displayitems() 
+    { 
+        $products = Product::orderBy('sku' , 'asc')->paginate(6);
+        return view('pages/displayitems')->with('products' , $products);
+    }
 }

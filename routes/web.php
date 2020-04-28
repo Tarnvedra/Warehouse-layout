@@ -13,13 +13,10 @@
 
 Auth::routes();
 Route::get('/', 'PagesController@index');
-Route::get('/displayitems', 'PagesController@displayitems');
 Route::get('/dashboard' , 'PagesController@dashboard');
-Route::get('/home' , 'PagesController@dashboard');
-Route::get('/products' , 'ProductsController@index');
-Route::get('/products/sort' , 'ProductsController@sortitems');
-Route::get('/products/update' , 'ProductsController@update');
 Route::get('/products/add' , 'ProductsController@additems');
-Route::get('/products/{sku}' , 'ProductsController@show');
-Route::get('/products/destroy/{sku}' , 'ProductsController@destroy');
-Route::get('/products/edit/{sku}' , 'ProductsController@edit');
+Route::get('/products/sort' , 'ProductsController@sortitems');
+Route::get('/products/display' , 'ProductsController@displayitems');
+Route::get('/products/delete' , 'ProductsController@deleteitems');
+Route::resource('products', 'ProductsController');
+

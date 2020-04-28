@@ -22,15 +22,5 @@ class PagesController extends Controller
     return view('dashboard');
     }
 
-    public function home() 
-    {
-    return view('home');
-    }
-
-
-    public function displayitems() 
-    {
-    return view('pages/displayitems');
-    }
 }
 

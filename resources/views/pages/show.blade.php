@@ -75,10 +75,10 @@
 <a href="/products" class="btn btn-primary">Back</a>
     </div>
 <div class="col-sm-1">
-<a href="/products/edit/{{$product->sku}}" class="btn btn-info">Edit</a>
+<a href="/products/{{$product->sku}}/edit" class="btn btn-info">Edit</a>
 </div>
 <div class="col-sm-1">
-<a href="/products/destroy/{{$product->sku}}" class="btn btn-danger">Delete</a>
+<a href="/products/{{$product->sku}}/destroy" class="btn btn-danger">Delete</a>
 </div>
 </div>
 

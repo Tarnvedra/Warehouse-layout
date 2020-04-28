@@ -10,7 +10,7 @@
     <div class="row pt-3 pr-2">
     <a href="/products/add"><img src="images/additem.png" width="125" height="125" title="add items" alt="add item"></a>
     <a href="/products/delete"><img src="images/deleteitem.png" width="125" height="125" title="delete items" alt="delete item"></a>
-    <a href="/products/sortitems"><img src="images/sortitems.png" width="125" height="125" title="sort items" alt="sort item"></a>
+    <a href="/products/sort"><img src="images/sortitems.png" width="125" height="125" title="sort items" alt="sort item"></a>
     </div>
 <div class="row pt-1 pr-2">
     <a href="/products"><img src="images/listitems.png" width="125" height="125" title="list items" alt="list item"></a>

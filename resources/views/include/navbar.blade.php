@@ -17,16 +17,13 @@
           <a class="nav-link" href="/products/delete">Delete items</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/products/edit">Edit item</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/sortitems">Sort items</a>
+          <a class="nav-link" href="/products/sort">Sort items</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/products">List items</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/displayitems">Display Aisle</a>
+          <a class="nav-link" href="/products/display">Display Aisle</a>
         </li>
       </ul>
       </div>

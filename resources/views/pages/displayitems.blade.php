@@ -12,36 +12,37 @@
 function displayAisle-->
 <p>
    <button type="button">-----Aisle 1-----</button><button type="button">-----Aisle 2-----</button><button type="button">------Aisle 3-----</button>
-<p>Lorem ipsum dolor sit amet, eos duis omittam explicari te, usu an reque perpetua. </p>
-<p>Tacimates adolescens has ut, ex eum melius deleniti postulant. In ius soleat consulatu scripserit,
-<p>    eos esse bonorum dolorum id, no reque sadipscing vel. Facilisi electram definiebas usu te, ipsum</p>
-<p> oratio fierent in mel. Ad nostro veritus percipit eos, id sumo commodo accusam pro.</p>
 
-<table class="table table-striped"> 
-   <tr>
-       <th>Location</th>
-       <th>Sku</th>
-       <th>Description</th>
-       <th>Iamge</th>
-   </tr>
-   @if(count($products > 0))
-   @foreach($products as $product)
-       <td>{{  $->sku }}</td>
-       <td>{{  $product->description }}</td>
-       <td>{{  $product->width }}</td>
-       <td>{{  $product->length }}</td>
-       <td>{{  $product->height }}</td>
-       <td>{{  $product->mass }}</td>
-       <td>{{  $product->volume }}</td>
-       <td>{{  $product->density }}</td>
-   @endforeach
-   @else 
-   <tr>
-   </td> No Products Found </td>
-   </tr>
-   @endif
-</table>
+<div style="background-color: white;">
+    <table class="table table-bordered table-striped"> 
+        <tr>
+            <th>Sku</th>
+            <th>Description</th>
+            <th>Width(cm)</th>
+            <th>Length(cm)</th>
+            <th>Height(cm)</th>
+            <th>Mass(kg)</th>
+        </tr>
+        @if(count($products) >0)
+        @foreach($products as $product)
+        <tr>
+            <td><a href="/products/{{$product->sku}}"> {{  $product->sku }}</a></td>
+            <td>{{  $product->description }}</td>
+            <td>{{  $product->width }}</td>
+            <td>{{  $product->length }}</td>
+            <td>{{  $product->height }}</td>
+            <td>{{  $product->mass }}</td>
+        </tr>
+            @endforeach
+            {{$products->links()}}
+        @else 
+        <tr>
+        </td> No Products Found </td>
+        </tr>
+        @endif
+    </table>
+    </div> 
 
-<hr>    
-@include('include/dashboard')
+    <hr>
+    @include('include/dashboard')
 @endsection

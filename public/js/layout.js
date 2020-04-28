@@ -70,16 +70,16 @@ function calculateVolDensity()
     /* calculate volume */
     result = width * length * height;
     result = result.toFixed(5);
-    alert('result1 ='+result);
+    /* alert('result1 ='+result); */
     var volume = parseFloat(result);
-    alert('value of volume: ='+ volume);
+    /* alert('value of volume: ='+ volume); */
     
      /* calculate density */
     result1 = mass / volume;
     result1 = result1.toFixed(5);
-    alert('result1 ='+result1);
+    /* alert('result1 ='+result1); */
     var density = parseFloat(result1);
-    alert('value of density: ='+ density);
+    /* alert('value of density: ='+ density); */
     
     var sizeNine  = [50,50,50,15,30,125000,0.00012,0.00024];
     var sizeEight = [40,40,40,12,14.9,64000,0.0001875,0.000234375];
@@ -92,7 +92,7 @@ function calculateVolDensity()
     var sizeOne   = [5,5,5,1,1.9,125,0.008,0.0152];
     var sizeZero  = [2,2,2,0.5,0.9,8,0.0625,0.1125];
     
-    alert('Mass '+mass);
+   /* alert('Mass '+mass); */
     var size=10;
     
     if (mass >= sizeNine[3] && mass <= sizeNine[4] || volume >sizeEight[5])
@@ -146,7 +146,7 @@ function calculateVolDensity()
            size = 0;    
         }   
     
-    alert('size value =' +size);
+    /*alert('size value =' +size); */
    
     
     /* return values of volume and density and size to hidden inputs HTML form */

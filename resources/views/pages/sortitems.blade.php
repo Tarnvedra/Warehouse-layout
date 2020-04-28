@@ -42,6 +42,8 @@ function displayProducts-->
         <th>Volume (cm/3)</th>
         
     </tr>
-    
-
+ 
+</table>
+<hr>
+    @include('include/dashboard')
 @endsection

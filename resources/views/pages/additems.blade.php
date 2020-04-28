@@ -6,8 +6,7 @@
         <!-- form to input a new product to the system and call Javascript
         function additems-->
         <div>
-        <form id="itemForm"  method="POST" action="{{ route('products.store') }}" onsubmit="calculateVolDensity()">
-            {{ method_field('PUT') }}
+        <form id="itemForm"  method="POST" action="{{ route('products.store') }}" enctype="multipart/form-data" onsubmit="calculateVolDensity()">
             {{ csrf_field() }}
                 <div class="form-group row">
                     <div class="col-md-2">
@@ -23,7 +22,7 @@
                             <label class="label-color" for="item">Enter Product description : </label>
                     </div>  
                             <div class="col-md-10">
-                            <input class="form-control col-sm-4" type="text-area" name="item"  maxlength="60" required>
+                            <input class="form-control col-sm-4" type="text-area" name="description"  maxlength="100" required>
                             </div>
                 </div> 
                     <div class="form-group row">
