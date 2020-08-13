@@ -18,9 +18,9 @@
 
      <h4 class="index">Current Progress</h4>
      <p class="index"> Login, register , dashboard , add, edit,update and list items are functioning, delete only works from list items at the moment all other functions are being worked upon and do not function correctly<br>
-        at this time, although it is possible to create an account<p>
+        at this time, although it is possible to create an account or use test account.<br> For Demo user please login as, <b><i>User: </i>test@test.com <i>Password: </i>1234567890</b><p>
 
-    <p>For Demo user please login as, <b><i>User: </i>test@test.com <i>Password: </i>1234567890</b></p>
+
 
     <p><a class="btn btn-primary btn-lg" href="/login" role="button">Proceed to Login Page</a> <a class="btn btn-success btn-lg" href="/register" role="button">Proceed to Regististration page</a></p>
 
