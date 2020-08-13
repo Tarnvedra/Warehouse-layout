@@ -13,12 +13,15 @@
         <p class="index">
         <strong>Coding Objective</strong><br>
        <p class="index"> Web Application development written in PHP/Laravel (Origin branch PHP/HTML5) for efficient product selection, using web app for efficient placement of stock using layout planning <br>with volumetrics (calculations using Mass , Volume and Density)
-        
+
      <br>   Origin branch has been deprecated converting code to Laravel MVC for master branch</p>
 
      <h4 class="index">Current Progress</h4>
      <p class="index"> Login, register , dashboard , add, edit,update and list items are functioning, delete only works from list items at the moment all other functions are being worked upon and do not function correctly<br>
         at this time, although it is possible to create an account<p>
+
+    <p>For Demo user please login as, <b><i>User: </i>test@test.com <i>Password: </i>1234567890</b></p>
+
     <p><a class="btn btn-primary btn-lg" href="/login" role="button">Proceed to Login Page</a> <a class="btn btn-success btn-lg" href="/register" role="button">Proceed to Regististration page</a></p>
 
     <h3 class="index">Screenshots</h3>
