@@ -12,12 +12,12 @@ class PagesController extends Controller
         $this->middleware('auth',['except' => ['index']]);
     }
 
-    public function index() 
+    public function index()
     {
     return view('index');
     }
 
-    public function dashboard() 
+    public function dashboard()
     {
     return view('dashboard');
     }

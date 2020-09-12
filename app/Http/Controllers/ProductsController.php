@@ -111,7 +111,7 @@ class ProductsController extends Controller
     public function edit($sku)
     {
         $product = Product::find($sku);
-        
+
         //Check if post exists before deleting
         if (!isset($product)){
             return redirect('/posts')->with('error', 'No Product Found');
@@ -164,7 +164,7 @@ class ProductsController extends Controller
         else {
             $fileNameToStore = 'empty.png';
         }
-      
+
         $product->sku = $request->input('sku');
         $product->description = $request->input('description');
         $product->width = $request->input('width');
@@ -188,7 +188,7 @@ class ProductsController extends Controller
      */
     public function destroy($sku)
     {
-        
+
         $product = Product::find($sku);
        // if($product->image != 'empty.png'){
         //    Storage::delete('public/uploads/.$product->image');
@@ -199,26 +199,26 @@ class ProductsController extends Controller
       // return redirect('pages/listitems')->with('success', 'Item Removed');
     }
 
-    public function sortitems() 
+    public function sortitems()
     {
     $products = Product::orderBy('sku' , 'asc')->paginate(7);
      return view('pages/sortitems')->with('products' , $products);
     }
 
 
-    public function additems() 
-    { 
+    public function additems()
+    {
         return view('pages/additems');
     }
 
-    public function deleteitems() 
-    { 
+    public function deleteitems()
+    {
         return view('pages/delitem');
     }
 
-    public function displayitems() 
-    { 
-        $products = Product::orderBy('sku' , 'asc')->paginate(6);
+    public function displayitems()
+    {
+        $products = Product::orderBy('sku' , 'asc')->paginate(50);
         return view('pages/displayitems')->with('products' , $products);
     }
 }
