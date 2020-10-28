@@ -223,7 +223,7 @@ class ProductsController extends Controller
 
     {
         // create join of locations and products tables
-        $query = "SELECT locations.location, products.sku, products.description, products.image FROM products JOIN locations ON products.sku = locations.sku WHERE location LIKE 'A-01-%'";
+        $query = "SELECT locations.location, products.sku, products.description, products.image FROM products JOIN locations ON products.sku = locations.sku WHERE location LIKE 'A-01-%' ORDER BY locations.location ASC";
         $products = DB::select($query);
         //dd($products);
         return view('pages/displayitems')->with('products' , $products);
