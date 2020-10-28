@@ -52,7 +52,7 @@ body {
   {
     background-color: lightblue;
     margin: 200px;
-    padding: 100px;    
+    padding: 100px;
     border-style: solid;
   }
 
@@ -68,15 +68,26 @@ body {
 
   .table-striped tbody tr:nth-of-type(odd) {
     background-color:  lightblue;
+
+  }
+  .table-striped tbody{
+    font-size: 11px;
+
   }
 
   .index {
-    
+
     color:black;
 
-    
+
   }
 
-  .logoff {
-    
-  }
+#dashboardalt a {
+    text-decoration: none;
+    color: white;
+}
+/*.logoff {
+
+  } */
+
+

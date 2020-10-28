@@ -9,7 +9,7 @@
 
         <!-- Fonts -->
         <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-        <link href="{{ URL::asset('css/bootstrap.min.css') }}" rel="stylesheet">
+       <link href="{{ URL::asset('css/bootstrap.min.css') }}" rel="stylesheet">
         <link href="{{ URL::asset('css/layout.css') }}" rel="stylesheet">
     </head>
     <body>

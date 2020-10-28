@@ -23,7 +23,7 @@ class ProductsController extends Controller
 
     public function index()
     {
-     $products = Product::orderBy('sku' , 'asc')->paginate(7);
+     $products = Product::orderBy('id' , 'asc')->paginate(10);
      return view('pages/listitems')->with('products' , $products);
     }
 
