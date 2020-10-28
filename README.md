@@ -6,4 +6,5 @@ Stock Management and its efficient movement is one of the biggest challenges fac
 size of a product to assist in streamlining the picking process.
 
 
-
+Screenshot of List all Products Page
+![List Products](https://github.com/Tarnvedra/Warehouse-layout/blob/master/public/images/list.png)
