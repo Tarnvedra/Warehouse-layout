@@ -10,7 +10,7 @@ size of a product to assist in streamlining the picking process.
 
 # Problem Description / Key Aims
 
-Key Issues:
+**Key Issues:**
 
 In Stock storage, Warehousing and distribution the Incorrect placement or location of product not only results in poor Stock management but also leads to a reduction in the output and efficiency of Operator productivity (pick rate %). These combined inefficiencies all have a negative effect on both the performance and profitability of a Business.
 
@@ -20,7 +20,7 @@ As a consequence of poor space planning, Operators on many occasions are unable 
 
 This then creates repeat handling and an increased workload on despatch Operators which ultimately slows down the total end to end process.
 
-Key Aims:
+**Key Aims:**
 
 * Eliminate waste by maximising the use of total storage space by the introduction of intelligent space planning.
 
@@ -33,6 +33,9 @@ Key Aims:
 * Increase Output and profitability of the Business
 
 
-# Screenshot of List all Products Page
+
+# Screenshots
+
+**Screenshot of List all Products Page**
 
 ![List Products](https://github.com/Tarnvedra/Warehouse-layout/blob/master/public/images/list.png)
