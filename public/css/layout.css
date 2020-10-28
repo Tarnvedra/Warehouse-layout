@@ -67,7 +67,7 @@ body {
   }
 
   .table-striped tbody tr:nth-of-type(odd) {
-    background-color:  lightblue;
+    background-color: #e8f4f8;
 
   }
   .table-striped tbody{
@@ -85,6 +85,11 @@ body {
 #dashboardalt a {
     text-decoration: none;
     color: white;
+}
+
+#dashboard a {
+    text-decoration: none;
+    color: black;
 }
 /*.logoff {
 

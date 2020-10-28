@@ -20,26 +20,23 @@ function displayAisle-->
             <th>Location</th>
             <th>Sku</th>
             <th>Description</th>
-            <th>Width(cm)</th>
+           <!-- <th>Width(cm)</th>
             <th>Length(cm)</th>
             <th>Height(cm)</th>
-            <th>Mass(kg)</th>
+            <th>Mass(kg)</th> -->
             <th>Image</th>
         </tr>
         @if(count($products) >0)
         @foreach($products as $product)
         <tr>
-            <td>A-1-L1-A</td>
+            <td>{{ $product->location }}</td>
             <td><a href="/products/{{$product->sku}}"> {{  $product->sku }}</a></td>
             <td>{{  $product->description }}</td>
-            <td>{{  $product->width }}</td>
-            <td>{{  $product->length }}</td>
-            <td>{{  $product->height }}</td>
-            <td>{{  $product->mass }}</td>
-            <td><img src="{{ asset('images')}}/{{ $product->image   }}" width="50" height="50"></td>
+
+            <td><img src="{{ URL::asset('images')}}/{{ $product->image   }}" width="50" height="50"></td>
         </tr>
             @endforeach
-            {{$products->links()}}
+
         @else
         <tr>
         </td> No Products Found </td>

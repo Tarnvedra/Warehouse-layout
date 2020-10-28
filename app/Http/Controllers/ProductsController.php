@@ -23,7 +23,7 @@ class ProductsController extends Controller
 
     public function index()
     {
-     $products = Product::orderBy('id' , 'asc')->paginate(10);
+     $products = Product::where('sku','!=','EMPTY')->orderBy('id' , 'asc')->paginate(10);
      return view('pages/listitems')->with('products' , $products);
     }
 
@@ -217,8 +217,18 @@ class ProductsController extends Controller
     }
 
     public function displayitems()
+
     {
-        $products = Product::orderBy('sku' , 'asc')->paginate(50);
+        // create join of locations and products tables
+        $query = "SELECT locations.location, products.sku, products.description, products.image FROM products JOIN locations ON products.sku = locations.sku WHERE location LIKE 'A-01-%'";
+        $products = DB::select($query);
+        //dd($products);
         return view('pages/displayitems')->with('products' , $products);
+    }
+
+    public function testaisle()
+    {
+     $products = DB::table('products')->crossJoin('locations')->get();
+     return view('pages/displayitems')->with('products' , $products);
     }
 }
