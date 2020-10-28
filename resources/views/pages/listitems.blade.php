@@ -9,7 +9,7 @@
 <div style="background-color: white;">
 <table class="table table-bordered table-striped">
     <tr>
-        <th>No.</th>
+        <th>#</th>
         <th>Sku</th>
         <th>Description</th>
         <th>Width(cm)</th>
