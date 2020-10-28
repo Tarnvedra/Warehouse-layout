@@ -189,15 +189,18 @@ class ProductsController extends Controller
     public function destroy($sku)
     {
 
-        $product = Product::find($sku);
+        $product = Product::where('sku', '=' , $sku);
        // if($product->image != 'empty.png'){
         //    Storage::delete('public/uploads/.$product->image');
         // }
+        //dd($product);
         $product->delete();
-        $products = Product::orderBy('sku' , 'asc')->paginate(7);
-        return view('pages/listitems')->with('products' , $products)->with('success', 'Item Removed');
-      // return redirect('pages/listitems')->with('success', 'Item Removed');
+
+
+        return redirect('/products')->with('success' , 'Product Deleted');
     }
+
+
 
     public function sortitems()
     {
@@ -226,9 +229,5 @@ class ProductsController extends Controller
         return view('pages/displayitems')->with('products' , $products);
     }
 
-    public function testaisle()
-    {
-     $products = DB::table('products')->crossJoin('locations')->get();
-     return view('pages/displayitems')->with('products' , $products);
-    }
+
 }

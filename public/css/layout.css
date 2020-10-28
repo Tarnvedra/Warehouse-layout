@@ -91,6 +91,11 @@ body {
     text-decoration: none;
     color: black;
 }
+
+hr {
+    color: white;
+}
+
 /*.logoff {
 
   } */

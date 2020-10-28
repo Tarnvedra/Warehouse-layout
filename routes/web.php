@@ -18,5 +18,6 @@ Route::get('/products/add' , 'ProductsController@additems');
 Route::get('/products/sort' , 'ProductsController@sortitems');
 Route::get('/products/display' , 'ProductsController@displayitems');
 Route::get('/products/delete' , 'ProductsController@deleteitems');
+Route::delete('/product/{id}/destroy' , 'ProductsController@destroy');
 Route::resource('products', 'ProductsController');
 

@@ -1,32 +1,85 @@
 @extends('home')
 
 @section('content')
+<div class="container">
+    <h1 class="h4 text-gray-900 mb-4 text-center">Warehouse Layout Login</h1>
+    <!-- Outer Row -->
+    <div class="row justify-content-center">
+
+      <div class="col-xl-10 col-lg-12 col-md-9">
+        <form method="POST" action="{{ route('login') }}">
+            @csrf
+
+        <div class="card o-hidden border-0 shadow-lg my-5">
+          <div class="card-body p-0">
+            <!-- Nested Row within Card Body -->
+            <div class="row">
+              <div class="col-lg-6 d-none d-lg-block"  style="background-image: url('{{asset('images/pr.png')}}'); background-repeat: no-repeat;"></div>
+              <div class="col-lg-6">
+                <div class="p-5">
 
 
-<div class="jumbotron bg-light">
-    <h1 class="index pb-2">Welcome To the Warehouse Layout Application</h1>
-    <p class="index"><strong>Abstract</strong><br>
-        Stock Management and its efficient movement is one of the biggest challenges facing a distribution warehouse. Bottlenecks in this process cost the business time and money.</p>
-     <p class="index">    A small section of a warehouse has been investigated, in particular the picking department to try to improve on the current process and to maximise efficiency using an
-          Information Technology solution.</p> <p class="index"> The technology in question is a web application that uses intelligent space planning to ascertain a products optimal location to assist in streamlining the picking process.
-        <br>
-        <p class="index">
-        <strong>Coding Objective</strong><br>
-       <p class="index"> Web Application development written in PHP/Laravel (Origin branch PHP/HTML5) for efficient product selection, using web app for efficient placement of stock using layout planning <br>with volumetrics (calculations using Mass , Volume and Density)
+                    <div class="form-group">
+                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
-     <br>   Origin branch has been deprecated converting code to Laravel MVC for master branch</p>
+                        @error('email')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
 
-     <h4 class="index">Current Progress</h4>
-     <p class="index"> Login, register , dashboard , add, edit,update and list items are functioning, delete only works from list items at the moment all other functions are being worked upon and do not function correctly<br>
-        at this time, although it is possible to create an account or use test account.<br> For Demo user please login as, <b><i>User: </i>test@test.com <i>Password: </i>1234567890</b><p>
+                    </div>
+                    <div class="form-group">
+                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+
+                        @error('password')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+
+                    </div>
+                    <div class="form-group">
+                      <div class="custom-control custom-checkbox small">
+                        <input type="checkbox" class="custom-control-input" id="customCheck">
+                        <label class="custom-control-label" for="customCheck">Remember Me</label>
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">
+                        {{ __('Login') }}
+                    </button>
+
+
+                  </form>
+                  <hr>
+                  <div class="text-center">
+                    <a class="small" href="#">Forgot Password?</a>
+                  </div>
+                  <div class="text-center">
+                    <a class="small" href="{{ route('register') }}">Create an Account!</a>
+                  </div>
+                  <form id="demo" name="demo" method="POST" action="{{ route('login') }}">
+                    @csrf
+                  <div class="text-center">
+                    <input id="email" type="hidden" class="form-control @error('email') is-invalid @enderror" name="email" required value="test@test.com">
+                    <input id="password" type="hidden" class="form-control @error('password') is-invalid @enderror" name="password" required value="1234567890">
+                    <button type="submit" class="btn btn-success btn-block">
+                        {{ __('Demo Account') }}
+
+                    </button>
+                    </div>
+                </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
 
 
 
-    <p><a class="btn btn-primary btn-lg" href="/login" role="button">Proceed to Login Page</a> <a class="btn btn-success btn-lg" href="/register" role="button">Proceed to Regististration page</a></p>
-
-    <h3 class="index">Screenshots</h3>
-    <img src="images/list.png" alt="unable to load image" width="700" height="500">
-    <img src="images/dasha.png" alt="unable to load image" width="700" height="500">
-</div>
 
 @endsection
