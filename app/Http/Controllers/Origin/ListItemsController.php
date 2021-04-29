@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Origin;
 
 use Illuminate\Http\Request;
 
-class ListitemsController extends Controller
+class ListItemsController extends Controller
 {
 
   public function __construct()
@@ -13,7 +13,7 @@ class ListitemsController extends Controller
   }
 
 
-  public function listItems() 
+  public function listItems()
   {
  // return view('pages/listitems')->with()
   }
@@ -24,7 +24,7 @@ public function list() {
 $connection = new mysqli($hostname, $username, $password, $database);
 if ($connection->connect_error) {
     die("Fatal database error...");
-} 
+}
  $query = "SELECT * FROM product";
  $result = mysqli_query($connect, $query);
  while($row = mysqli_fetch_array($result))
@@ -43,26 +43,26 @@ if ($connection->connect_error) {
 }
   }
 
-  //public function allItems() 
+  //public function allItems()
 //  {
     // require_once 'login.php';
   //  $connection = new mysqli($hostname, $username, $password, $database);
    // if ($connection->connect_error) die("Fatal database connection error");
-  
+
 //    $query = "SELECT * FROM product WHERE SKU !='00000'";
  //   $result = $connection->query($query);
-    
+
    // if ($result-> num_rows >0){
      //   while ($row = $result-> fetch_assoc()){
-       //      echo "<tr><td>" . $row['sku'] . 
+       //      echo "<tr><td>" . $row['sku'] .
          //         "</td><td>" . $row['item'] .
            //       "</td><td>" . $row['width'] .
-             //     "</td><td>" . $row['length'] . 
-               //   "</td><td>" . $row['height'] . 
-              //    "</td><td>" . $row['mass'] . 
-              //    "</td><td>" . $row['volume'] . 
-              //    "</td><td>" . $row['density'] . "</td></tr>";     
-      ///  }  
+             //     "</td><td>" . $row['length'] .
+               //   "</td><td>" . $row['height'] .
+              //    "</td><td>" . $row['mass'] .
+              //    "</td><td>" . $row['volume'] .
+              //    "</td><td>" . $row['density'] . "</td></tr>";
+      ///  }
     //    echo "</table>";
    // }
    // else {
@@ -70,5 +70,5 @@ if ($connection->connect_error) {
     //}
     // $result->close();
     //$connection->close();
-    
-  
+
+

@@ -56,10 +56,6 @@
         </div>
     </li>
 
-
-    <!-- Divider -->
-    <hr class="sidebar-divider">
-
     <!-- Heading -->
 
     <li class="nav-item">
@@ -81,6 +77,9 @@
             </div>
         </div>
     </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider">
 
     <li class="sidebar-heading">
         User Tasks

@@ -78,7 +78,7 @@
                                name="email" required value="test@test.com">
                         <input id="password" type="hidden" class="form-control @error('password') is-invalid @enderror"
                                name="password" required value="1234567890">
-                        <button type="submit" class="btn btn-outline-primary btn-xs">
+                        <button type="submit" class="btn btn-outline-success btn-xs">
                             {{ __('Demo Account') }}
 
                         </button>

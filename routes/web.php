@@ -11,13 +11,19 @@
 |
 */
 
+use App\Http\Controllers\Locations\LocationsController;
+use App\Http\Controllers\Products\ProductsController;
+use App\Http\Controllers\PagesController;
+
 Auth::routes();
-Route::get('/', 'PagesController@index');
-Route::get('/dashboard' , 'PagesController@dashboard')->name('dashboard');
-Route::get('/products/add' , 'ProductsController@additems')->name('item.add');
-Route::get('/products/sort' , 'ProductsController@sortitems')->name('items.sort');
-Route::get('/products/display' , 'ProductsController@displayitems')->name('items.display');
-Route::get('/products/delete' , 'ProductsController@deleteitems')->name('item.delete');
-Route::delete('/product/{id}/destroy' , 'ProductsController@destroy');
+
+Route::get('/', [PagesController::class ,'index']);
+Route::get('/dashboard' , [PagesController::class, 'dashboard'])->name('dashboard');
+
+Route::get('/products/add' , [ProductsController::class, 'addItems'])->name('item.add');
+Route::get('/products/sort' , [ProductsController::class, 'sortItems'])->name('items.sort');
+Route::get('/products/display' , [ProductsController::class, 'displayItems'])->name('items.display');
+Route::get('/products/delete' , [ProductsController::class , 'deleteItems'])->name('item.delete');
+Route::delete('/product/{id}/destroy' , [ProductsController::class, 'destroy']);
 Route::resource('products', 'ProductsController');
 

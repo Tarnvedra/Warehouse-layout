@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Origin;
 
 use Illuminate\Http\Request;
 
-class SortitemsController extends Controller
+class SortItemsController extends Controller
 {
 
 
@@ -19,14 +19,14 @@ class SortitemsController extends Controller
         $connection = new mysqli($hostname, $username, $password, $database);
         if ($connection->connect_error) {
             die("Fatal database error...0000000000000000000000000000");
-        } 
-        
-        
+        }
+
+
          $selected = filter_input(INPUT_POST, 'result');
-         
+
          echo($selected ."=RESULT <br>");
-         
-        
+
+
          if ($selected === 1)
                  {
              $query = "SELECT * FROM product ORDER BY mass DESC";
@@ -37,10 +37,10 @@ class SortitemsController extends Controller
          elseif ($selected === 3) {
              $query = "SELECT * FROM product ORDER BY density DESC";
          }
-        
+
             $result = $connection->query($query);
-            
-             echo"<table>"; 
+
+             echo"<table>";
              echo"<tr>";
              echo"<th>Sku</th>";
              echo"<th>Description</th>";
@@ -51,18 +51,18 @@ class SortitemsController extends Controller
              echo"<th>Density (g/m3)</th>";
              echo"<th>Volume (cm/3)<th>";
              echo"</tr>";
-             
+
             if ($result-> num_rows >0){
                 while ($row = $result-> fetch_assoc()){
-                  echo "<tr><td>" . $row['sku'] . 
+                  echo "<tr><td>" . $row['sku'] .
                           "</td><td>" . $row['item'] .
                           "</td><td>" . $row['width'] .
-                          "</td><td>" . $row['length'] . 
-                          "</td><td>" . $row['height'] . 
-                          "</td><td>" . $row['mass'] . 
-                          "</td><td>" . $row['volume'] . 
-                          "</td><td>" . $row['density'] . "</td></tr>";     
-                }  
+                          "</td><td>" . $row['length'] .
+                          "</td><td>" . $row['height'] .
+                          "</td><td>" . $row['mass'] .
+                          "</td><td>" . $row['volume'] .
+                          "</td><td>" . $row['density'] . "</td></tr>";
+                }
                 echo "</table>";
             }
             else {
@@ -72,23 +72,23 @@ class SortitemsController extends Controller
             $connection->close();
      }
 
-     public function sortMass() 
+     public function sortMass()
      {
         // require_once 'login.php';
         $connection = new mysqli($hostname, $username, $password, $database);
         if ($connection->connect_error) die("Fatal database connection error");
-        
-        $query = "SELECT * FROM product WHERE Sku !='00000' ORDER BY mass DESC, volume DESC, density DESC"; 
+
+        $query = "SELECT * FROM product WHERE Sku !='00000' ORDER BY mass DESC, volume DESC, density DESC";
         $result = $connection->query($query);
-        
+
         if ($result-> num_rows >0){
         while ($row = $result-> fetch_assoc()){
-             echo "<tr><td>" . $row['sku'] . 
+             echo "<tr><td>" . $row['sku'] .
                   "</td><td>" . $row['item'] .
-                  "</td><td>" . $row['mass'] . 
-                  "</td><td>" . $row['volume'] . 
-                  "</td><td>" . $row['density'] . "</td></tr>";     
-        }  
+                  "</td><td>" . $row['mass'] .
+                  "</td><td>" . $row['volume'] .
+                  "</td><td>" . $row['density'] . "</td></tr>";
+        }
         echo "</table>";
         }
         else {
@@ -96,26 +96,26 @@ class SortitemsController extends Controller
         }
         $result->close();
         $connection->close();
-        
+
      }
 
-     public function sortVolume() 
+     public function sortVolume()
      {
         //require_once 'login.php';
         $connection = new mysqli($hostname, $username, $password, $database);
         if ($connection->connect_error) die("Fatal database connection error");
-        
-        $query = "SELECT * FROM product WHERE Sku !='00000' ORDER BY volume DESC,mass DESC, density DESC"; 
+
+        $query = "SELECT * FROM product WHERE Sku !='00000' ORDER BY volume DESC,mass DESC, density DESC";
         $result = $connection->query($query);
-        
+
         if ($result-> num_rows >0){
         while ($row = $result-> fetch_assoc()){
-             echo "<tr><td>" . $row['sku'] . 
-                  "</td><td>" . $row['item'] . 
-                  "</td><td>" . $row['volume'] . 
-                  "</td><td>" . $row['mass'] . 
-                  "</td><td>" . $row['density'] . "</td></tr>";     
-        }  
+             echo "<tr><td>" . $row['sku'] .
+                  "</td><td>" . $row['item'] .
+                  "</td><td>" . $row['volume'] .
+                  "</td><td>" . $row['mass'] .
+                  "</td><td>" . $row['density'] . "</td></tr>";
+        }
         echo "</table>";
         }
         else {
@@ -123,7 +123,7 @@ class SortitemsController extends Controller
         }
         $result->close();
         $connection->close();
-        
+
      }
 
      public function sortDensity()
@@ -131,18 +131,18 @@ class SortitemsController extends Controller
 
        $connection = new mysqli($hostname, $username, $password, $database);
        if ($connection->connect_error) die("Fatal database connection error");
-       
-       $query = "SELECT * FROM product WHERE Sku !='00000' ORDER BY density DESC, volume DESC,mass DESC"; 
+
+       $query = "SELECT * FROM product WHERE Sku !='00000' ORDER BY density DESC, volume DESC,mass DESC";
        $result = $connection->query($query);
-       
+
        if ($result-> num_rows >0){
        while ($row = $result-> fetch_assoc()){
-            echo "<tr><td>" . $row['sku'] . 
-                 "</td><td>" . $row['item'] . 
+            echo "<tr><td>" . $row['sku'] .
+                 "</td><td>" . $row['item'] .
                  "</td><td>" . $row['density'] .
-                 "</td><td>" . $row['mass'] . 
-                 "</td><td>" . $row['volume'] . "</td></tr>";     
-       }  
+                 "</td><td>" . $row['mass'] .
+                 "</td><td>" . $row['volume'] . "</td></tr>";
+       }
        echo "</table>";
        }
        else {
@@ -150,6 +150,6 @@ class SortitemsController extends Controller
        }
        $result->close();
        $connection->close();
-        
+
      }
 }

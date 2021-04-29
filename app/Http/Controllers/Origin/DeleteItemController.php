@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Origin;
 
 use Illuminate\Http\Request;
 
-class DeleteitemController extends Controller
+class DeleteItemController extends Controller
 {
 
     public function __construct()
@@ -15,7 +15,7 @@ class DeleteitemController extends Controller
 
 
 
-    public function delete() 
+    public function delete()
     {
         $sku = filter_input(INPUT_POST, 'sku');
         //$testsku = filter_input(INPUT_POST, 'testsku');
@@ -24,28 +24,28 @@ class DeleteitemController extends Controller
         //{
         echo('Sku =:');
         echo($sku);
-        
+
         require_once 'login.php';
         $connection = new mysqli($hostname, $username, $password, $database);
         if ($connection->connect_error) {
             die("Fatal database error...");
-        } 
-        
+        }
+
         $query = "SELECT sku FROM product";
         $result = $connection->query($query);
-        
+
          if ($result-> num_rows >0)
              {
-         
+
                 while ($row = $result-> fetch_assoc())
-                { 
-                    
-                     
-                if ($row["sku"] === $sku) 
+                {
+
+
+                if ($row["sku"] === $sku)
                     {
                     $delete ="DELETE FROM product WHERE sku = ?";
                     if($statement === mysqli_prepare($connection, $delete)) {
-                    
+
                     mysqli_stmt_bind_param($statement, "s", $parameter_sku);
                     $parameter_sku = filter_input(INPUT_POST, 'sku');
                     if(mysqli_stmt_execute($statement))
@@ -53,22 +53,22 @@ class DeleteitemController extends Controller
                         // Records deleted successfully. Redirect to delete page
                         header("location: deleteitem.php");
                         exit();
-                        } 
+                        }
                     else{
                         echo "Error: X". $delete ."<br>". $connection->error;
                         echo "Oops! Something went wrong. Please try again later.";
                         }
                     }
-                    
-                   
-               
-                   
-                } 
-                
-                
-                
-                    
-             
+
+
+
+
+                }
+
+
+
+
+
             }
              }
             echo('all done!');
@@ -80,7 +80,7 @@ class DeleteitemController extends Controller
         //else if ($testsku === 0){
         //    echo('testsku ='+$testsku);
         //    echo('test failed');
-            
-         
+
+
     }
 }
