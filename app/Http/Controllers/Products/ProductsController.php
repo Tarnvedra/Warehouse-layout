@@ -3,9 +3,10 @@
 namespace App\Http\Controllers\Products;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use App\Product;
-use DB;
+use App\Http\Controllers\Controller;
 
 class ProductsController extends Controller
 {

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Origin;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class AddItemController extends Controller
 {
