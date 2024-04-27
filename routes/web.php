@@ -14,6 +14,8 @@
 use App\Http\Controllers\Locations\LocationsController;
 use App\Http\Controllers\Products\ProductsController;
 use App\Http\Controllers\PagesController;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
