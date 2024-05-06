@@ -24,17 +24,24 @@ class Product extends Model
     public const SIZE_NINE_LENGTH = 50;
     public const SIZE_EIGHT_LENGTH = 40;
     public const SIZE_NINE_WIDTH = 50;
+    public const SIZE_EIGHT_WIDTH = 40;
     public const SIZE_NINE_HEIGHT = 50;
+    public const SIZE_EIGHT_HEIGHT = 50;
 
     // weights in kilograms
     public const SIZE_NINE_MIN_WEIGHT = 15;
+    public const SIZE_EIGHT_MIN_WEIGHT = 12;
 
     public const SIZE_NINE_MAX_WEIGHT = 30;
+    public const SIZE_EIGHT_MAX_WEIGHT = 14.9;
 
     public const SIZE_NINE_VOLUME = 125000;
+    public const SIZE_EIGHT_VOLUME = 64000;
 
     public const SIZE_NINE_MIN_DENSITY = 0.00012;
     public const SIZE_NINE_MAX_DENSITY = 0.00024;
+    public const SIZE_EIGHT_MIN_DENSITY = 0.0001875;
+    public const SIZE_EIGHT_MAX_DENSITY = 0.000234375;
 
     public const SIZE_NINE = [
         self::SIZE_NINE_LENGTH, self::SIZE_NINE_WIDTH, self::SIZE_NINE_HEIGHT .
@@ -44,7 +51,11 @@ class Product extends Model
     ];
 
     public const SIZE_EIGHT = [
-        self::SIZE_EIGHT_LENGTH
+        self::SIZE_EIGHT_LENGTH, self::SIZE_EIGHT_WIDTH, self::SIZE_EIGHT_HEIGHT,
+        self::SIZE_EIGHT_MIN_WEIGHT, self::SIZE_EIGHT_MAX_WEIGHT,
+        self::SIZE_EIGHT_VOLUME,
+        self::SIZE_EIGHT_MIN_DENSITY, self::SIZE_EIGHT_MAX_DENSITY
+
     ];
 
     public const SIZE_SEVEN = [];
